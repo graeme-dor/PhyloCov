@@ -97,49 +97,59 @@
           </p>
         </div>
 
-        <div class="platform-layout">
-          <div class="app-browser">
-            <div class="app-browser-header">
-              <div>
-                <p class="eyebrow eyebrow-tight">Available tools</p>
-                <h3>Application launcher</h3>
-              </div>
-              <span class="app-count" id="app-count">0 apps</span>
+        <div class="embed-panel">
+          <div class="embed-meta">
+            <div>
+              <p class="eyebrow eyebrow-tight">Selected app</p>
+              <h3 id="app-title">Loading...</h3>
             </div>
-            <div class="app-list" id="app-list" role="tablist" aria-label="Earth Engine apps"></div>
-          </div>
-
-          <div class="embed-panel">
-            <div class="embed-meta">
-              <div>
-                <p class="eyebrow eyebrow-tight">Selected app</p>
-                <h3 id="app-title">Loading...</h3>
-              </div>
+            <div class="embed-actions">
               <a class="button button-ghost button-small" id="open-app-link" href="#" target="_blank" rel="noreferrer">
                 Open in new tab
               </a>
             </div>
+          </div>
 
-            <p class="app-description" id="app-description">
-              Loading app details.
-            </p>
+          <p class="app-description" id="app-description">
+            Loading app details.
+          </p>
 
-            <div class="tag-row" id="app-tags" aria-label="App tags"></div>
-
-            <div class="frame-wrap">
-              <iframe
-                id="app-frame"
-                title="PhyloCov hosted Earth Engine application"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-              ></iframe>
-              <div class="frame-placeholder" id="frame-placeholder">
+          <div class="platform-controls">
+            <div class="platform-tools">
+              <div class="app-browser-header">
                 <div>
-                  <h4>Connect your live Earth Engine app</h4>
-                  <p>
-                    Add a valid published URL in <code>app-config.js</code> to load the application here.
-                  </p>
+                  <p class="eyebrow eyebrow-tight">Available tools</p>
+                  <h3>Application launcher</h3>
                 </div>
+                <span class="app-count" id="app-count">0 apps</span>
+              </div>
+              <div class="app-list" id="app-list" role="tablist" aria-label="Earth Engine apps"></div>
+            </div>
+
+            <div class="platform-notes">
+              <div class="tag-row" id="app-tags" aria-label="App tags"></div>
+              <p>
+                Interact with the Earth Engine app directly here, or open it in a dedicated tab if you want
+                a standalone workspace.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="frame-stage">
+          <div class="frame-wrap">
+            <iframe
+              id="app-frame"
+              title="PhyloCov hosted Earth Engine application"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+            <div class="frame-placeholder" id="frame-placeholder">
+              <div>
+                <h4>Connect your live Earth Engine app</h4>
+                <p>
+                  Add a valid published URL in <code>app-config.js</code> to load the application here.
+                </p>
               </div>
             </div>
           </div>

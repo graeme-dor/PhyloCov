@@ -313,14 +313,6 @@ body::before {
   line-height: 1.7;
 }
 
-.platform-layout {
-  display: grid;
-  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
-  gap: 24px;
-  align-items: start;
-}
-
-.app-browser,
 .embed-panel,
 .about-card {
   padding: 24px;
@@ -410,10 +402,11 @@ body::before {
 
 .frame-wrap {
   position: relative;
-  min-height: 700px;
-  border-radius: 20px;
+  min-height: 78vh;
+  border-radius: 0;
   overflow: hidden;
-  border: 1px solid var(--line-strong);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
   background:
     linear-gradient(180deg, rgba(229, 236, 223, 0.5), rgba(249, 244, 235, 0.78)),
     #edf1e8;
@@ -421,7 +414,7 @@ body::before {
 
 #app-frame {
   width: 100%;
-  min-height: 700px;
+  min-height: 78vh;
   border: 0;
   display: block;
   background: #eef3ea;
@@ -448,6 +441,50 @@ body::before {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.platform-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.platform-tools,
+.platform-notes {
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.platform-notes {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.platform-notes p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.embed-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.frame-stage {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 24px;
+}
+
+.platform-tools .app-list {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .usage-strip,
@@ -552,9 +589,9 @@ body::before {
 
 @media (max-width: 980px) {
   .hero-grid,
-  .platform-layout,
   .about-grid,
   .hero-metrics,
+  .platform-controls,
   .usage-strip,
   .catalog-grid,
   .workflow-grid,
@@ -595,6 +632,6 @@ body::before {
 
   .frame-wrap,
   #app-frame {
-    min-height: 560px;
+    min-height: 68vh;
   }
 }
