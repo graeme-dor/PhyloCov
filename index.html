@@ -293,31 +293,48 @@
           <p class="eyebrow">Cite</p>
           <h2>Document datasets and platform provenance clearly</h2>
           <p>
-            This section is a placeholder for your formal citation text, dataset acknowledgements,
-            and recommended wording for users who rely on PhyloCov in publications or reports.
+            Users should cite both the PhyloCov platform and the original environmental datasets
+            underlying any covariates exported for downstream analyses.
           </p>
         </div>
 
         <div class="cite-layout">
           <article class="cite-card">
             <h3>Recommended citation block</h3>
+            <p class="citation-text">
+              Dor G, Poongavanan J, de Oliveira T, Tegally H. <em>PhyloCov: an interactive web-based
+              framework for exploring ecological covariates for integrated phylodynamic models.</em>
+              Web application and GitHub repository. Stellenbosch University / CERI. Available at
+              <a href="https://graeme-dor.github.io/PhyloCov/" target="_blank" rel="noreferrer">graeme-dor.github.io/PhyloCov</a>
+              and <a href="https://github.com/graeme-dor/PhyloCov" target="_blank" rel="noreferrer">github.com/graeme-dor/PhyloCov</a>.
+            </p>
             <p>
-              Add the preferred citation for the PhyloCov platform here once you have a stable project title,
-              author list, institution details, and repository or manuscript DOI.
+              Replace this with a DOI-backed citation once the platform, manuscript, or software record is formally archived.
             </p>
           </article>
           <article class="cite-card">
             <h3>Dataset acknowledgements</h3>
             <p>
-              List the core Google Earth Engine products, imported assets, and any required provider
-              attribution language for climate, vegetation, land-use, population, and suitability layers.
+              PhyloCov currently surfaces environmental covariates through Google Earth Engine,
+              including climate layers such as CHIRPS and TerraClimate, soil and terrain context,
+              vegetation and land-cover products, population-density surfaces, and imported project assets
+              such as suitability layers.
+            </p>
+            <p>
+              Any publication or report using exported covariates should cite the original dataset providers
+              for the specific layers selected in addition to citing the PhyloCov platform itself.
             </p>
           </article>
           <article class="cite-card">
             <h3>Methods note</h3>
             <p>
-              Explain how covariates were selected, transformed, or interpreted in downstream
-              phylodynamic and transmission analyses so users can mirror the reasoning transparently.
+              PhyloCov supports covariate extraction by allowing users to choose a dataset and band,
+              define a region or country of interest, configure temporal windows and spatial resolution,
+              and generate mapped outputs or zonal summaries for downstream phylodynamic and transmission analyses.
+            </p>
+            <p>
+              When reporting results, users should describe the ecological rationale for variable choice,
+              the processing settings used, and any transformations applied after export.
             </p>
           </article>
         </div>

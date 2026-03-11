@@ -494,6 +494,20 @@ body::before {
   line-height: 1.7;
 }
 
+.cite-card p + p {
+  margin-top: 14px;
+}
+
+.citation-text {
+  color: var(--text);
+}
+
+.citation-text a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
 .usage-step,
 .workflow-phase,
 .catalog-kicker {
