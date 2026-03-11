@@ -39,8 +39,8 @@
 
       <section class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Climate, ecology, and transmission context</p>
-          <h1>A clearer front door for ecological covariates in phylodynamics.</h1>
+          <p class="eyebrow">Ecological covariates for phylodynamics</p>
+          <h1>Explore transmission-relevant environmental context through a live Earth Engine interface.</h1>
           <p class="hero-text">
             PhyloCov is a research-facing web layer around a live Google Earth Engine application
             for exploring ecological covariates relevant to pathogen spread, transmission modelling,
@@ -48,36 +48,37 @@
           </p>
           <div class="hero-actions">
             <a class="button" href="#platform">Launch platform</a>
+            <a class="button button-ghost" href="#story">Read the workflow</a>
           </div>
           <dl class="hero-metrics">
             <div>
-              <dt>Architecture</dt>
-              <dd>Static site + embedded GEE app</dd>
+              <dt>Purpose</dt>
+              <dd>Covariate discovery and extraction</dd>
             </div>
             <div>
-              <dt>Deployment</dt>
-              <dd>GitHub Pages</dd>
+              <dt>Application</dt>
+              <dd>Live embedded Earth Engine app</dd>
             </div>
             <div>
-              <dt>Versioning</dt>
-              <dd>Iterative pre-1.0 releases</dd>
+              <dt>Use case</dt>
+              <dd>Phylodynamics and transmission modelling</dd>
             </div>
           </dl>
         </div>
 
         <aside class="hero-panel" aria-label="Platform summary">
           <div class="panel-card">
-            <span class="panel-label">Main page</span>
-            <h2>Overview first, live app immediately below.</h2>
+            <span class="panel-label">Research framing</span>
+            <h2>Why this platform exists.</h2>
             <p>
-              The homepage now combines the project framing and the live Earth Engine workspace,
-              while datasets, methods, citation guidance, and project context remain available from the top navigation.
+              Ecological and climatic variables are often central to phylodynamic inference,
+              but they are frequently difficult to discover, compare, and prepare consistently for model-ready use.
             </p>
             <ul class="feature-list">
-              <li>Live app embedded on the main page</li>
-              <li>Supporting pages kept in the top navigation</li>
-              <li>GitHub-hosted shell around an independent GEE app</li>
-              <li>Cleaner entry flow for first-time users</li>
+              <li>Explore layers before committing to a modelling workflow</li>
+              <li>Compare environmental context across regions and timescales</li>
+              <li>Document provenance before exporting covariates</li>
+              <li>Keep the analysis-facing app accessible from the homepage</li>
             </ul>
           </div>
         </aside>
@@ -85,6 +86,55 @@
     </header>
 
     <main>
+      <section class="story-section" id="story">
+        <div class="story-intro">
+          <p class="eyebrow">Story</p>
+          <h2>From environmental surfaces to phylodynamic inputs</h2>
+          <p>
+            PhyloCov is intended as an interpretive layer between large environmental data catalogues
+            and downstream inference. The goal is not just to display maps, but to help researchers
+            move from ecological intuition to transparent covariate selection.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <span class="story-step">01</span>
+            <h3>Identify ecologically plausible drivers</h3>
+            <p>
+              Screen climate, vegetation, land-use, population, topography, and imported suitability layers
+              against a focal transmission question before building formal hypotheses.
+            </p>
+          </article>
+          <article class="story-card">
+            <span class="story-step">02</span>
+            <h3>Configure extraction deliberately</h3>
+            <p>
+              Define region, country, time window, spatial resolution, and summary settings so the resulting
+              covariates match the scale and assumptions of the downstream model.
+            </p>
+          </article>
+          <article class="story-card">
+            <span class="story-step">03</span>
+            <h3>Carry context into analysis</h3>
+            <p>
+              Use the interactive workspace to inspect outputs, compare surfaces, and preserve dataset provenance
+              before exporting inputs into transmission or phylodynamic workflows.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="quote-band">
+        <div class="quote-band-inner">
+          <p class="quote-mark">“</p>
+          <p class="quote-text">
+            PhyloCov is designed to make ecological covariate selection more visible, comparable, and reproducible
+            before those variables enter formal inference.
+          </p>
+        </div>
+      </section>
+
       <section class="platform-section" id="platform">
         <div class="section-heading">
           <p class="eyebrow">Platform</p>
@@ -156,7 +206,7 @@
 
   <div class="site-shell">
     <main>
-      <section class="content-section">
+      <section class="content-section story-tail">
         <div class="section-heading">
           <p class="eyebrow">Workflow</p>
           <h2>Typical use inside the platform</h2>
@@ -178,6 +228,17 @@
             <h3>Inspect and export outputs</h3>
             <p>Use mapped outputs and summaries as inputs for downstream transmission models or phylodynamic analyses.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="content-section slim-section">
+        <div class="section-heading">
+          <p class="eyebrow">More</p>
+          <h2>Supporting material remains available above</h2>
+          <p>
+            Use the top navigation for dataset notes, methods, citation guidance, and project context.
+            The homepage remains the primary narrative entry point and live app view.
+          </p>
         </div>
       </section>
     </main>
