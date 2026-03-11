@@ -29,7 +29,6 @@
         </a>
         <div class="topbar-actions">
           <a class="nav-link" aria-current="page" href="./index.html">Home</a>
-          <a class="nav-link" href="./platform.html">Platform</a>
           <a class="nav-link" href="./datasets.html">Datasets</a>
           <a class="nav-link" href="./methods.html">Methods</a>
           <a class="nav-link" href="./cite.html">Cite</a>
@@ -48,8 +47,7 @@
             and integrated phylodynamic analysis.
           </p>
           <div class="hero-actions">
-            <a class="button" href="./platform.html">Open platform</a>
-            <a class="button button-ghost" href="./methods.html">See methods</a>
+            <a class="button" href="#platform">Launch platform</a>
           </div>
           <dl class="hero-metrics">
             <div>
@@ -69,18 +67,17 @@
 
         <aside class="hero-panel" aria-label="Platform summary">
           <div class="panel-card">
-            <span class="panel-label">Current structure</span>
-            <h2>The app now has its own dedicated page.</h2>
+            <span class="panel-label">Main page</span>
+            <h2>Overview first, live app immediately below.</h2>
             <p>
-              Home introduces the platform, while the interactive Earth Engine application,
-              dataset notes, methods, and citation guidance live on separate pages that are easier
-              to navigate, share, and expand over time.
+              The homepage now combines the project framing and the live Earth Engine workspace,
+              while datasets, methods, citation guidance, and project context remain available from the top navigation.
             </p>
             <ul class="feature-list">
-              <li>Dedicated platform page for the live app</li>
-              <li>Separate pages for datasets, methods, cite, and about</li>
-              <li>GitHub-hosted static shell around an independent GEE app</li>
-              <li>Room for future tools without turning the homepage into a scroll dump</li>
+              <li>Live app embedded on the main page</li>
+              <li>Supporting pages kept in the top navigation</li>
+              <li>GitHub-hosted shell around an independent GEE app</li>
+              <li>Cleaner entry flow for first-time users</li>
             </ul>
           </div>
         </aside>
@@ -88,73 +85,105 @@
     </header>
 
     <main>
-      <section class="content-section">
+      <section class="platform-section" id="platform">
         <div class="section-heading">
-          <p class="eyebrow">Explore</p>
-          <h2>Navigate the platform by task</h2>
+          <p class="eyebrow">Platform</p>
+          <h2>Use the live Earth Engine workspace</h2>
           <p>
-            Each section now has its own page so the platform behaves more like a research product
-            than a single long landing page.
+            Interact with the embedded app directly below, or open it in a separate tab if you want a standalone workspace.
           </p>
         </div>
 
-        <div class="link-grid">
-          <a class="nav-card" href="./platform.html">
-            <p class="catalog-kicker">Platform</p>
-            <h3>Use the live app</h3>
-            <p>Launch the full-width Earth Engine application inside the site, with the option to open it in a separate tab.</p>
-          </a>
-          <a class="nav-card" href="./datasets.html">
-            <p class="catalog-kicker">Datasets</p>
-            <h3>Review covariate families</h3>
-            <p>See the major environmental data themes surfaced through PhyloCov and how they support modelling decisions.</p>
-          </a>
-          <a class="nav-card" href="./methods.html">
-            <p class="catalog-kicker">Methods</p>
-            <h3>Follow the extraction workflow</h3>
-            <p>Understand how dataset choice, spatial extent, temporal windows, and summaries fit into the analytical pipeline.</p>
-          </a>
-          <a class="nav-card" href="./cite.html">
-            <p class="catalog-kicker">Cite</p>
-            <h3>Document provenance properly</h3>
-            <p>Use the suggested platform citation and attribution guidance for underlying environmental datasets.</p>
-          </a>
+        <div class="embed-panel">
+          <div class="embed-meta">
+            <div>
+              <p class="eyebrow eyebrow-tight">Selected app</p>
+              <h3 id="app-title">Loading...</h3>
+            </div>
+            <div class="embed-actions">
+              <a class="button button-ghost button-small" id="open-app-link" href="#" target="_blank" rel="noreferrer">
+                Open in new tab
+              </a>
+            </div>
+          </div>
+
+          <p class="app-description" id="app-description">
+            Loading app details.
+          </p>
+
+          <div class="platform-controls">
+            <div class="platform-tools">
+              <div class="app-browser-header">
+                <div>
+                  <p class="eyebrow eyebrow-tight">Available tools</p>
+                  <h3>Application launcher</h3>
+                </div>
+                <span class="app-count" id="app-count">0 apps</span>
+              </div>
+              <div class="app-list" id="app-list" role="tablist" aria-label="Earth Engine apps"></div>
+            </div>
+
+            <div class="platform-notes">
+              <div class="tag-row" id="app-tags" aria-label="App tags"></div>
+              <p>
+                The app stays interactive inside this page. Use the secondary link if you want to switch to a dedicated browser tab.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
+    </main>
+  </div>
 
+  <div class="frame-stage">
+    <div class="frame-wrap">
+      <iframe
+        id="app-frame"
+        title="PhyloCov hosted Earth Engine application"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+      <div class="frame-placeholder" id="frame-placeholder">
+        <div>
+          <h4>Connect your live Earth Engine app</h4>
+          <p>
+            Add a valid published URL in <code>app-config.js</code> to load the application here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-shell">
+    <main>
       <section class="content-section">
         <div class="section-heading">
-          <p class="eyebrow">Why this structure</p>
-          <h2>Separate pages fit the product better</h2>
+          <p class="eyebrow">Workflow</p>
+          <h2>Typical use inside the platform</h2>
         </div>
 
-        <div class="workflow-grid">
-          <article class="workflow-card">
-            <span class="workflow-phase">Focus</span>
-            <h3>The app gets its own workspace</h3>
-            <p>
-              The live Earth Engine page is no longer competing with the rest of the site for space,
-              so interaction feels closer to a dedicated dashboard.
-            </p>
+        <div class="usage-strip">
+          <article class="usage-card">
+            <span class="usage-step">1</span>
+            <h3>Define an area of interest</h3>
+            <p>Choose a region, country, or analysis extent that matches the ecological question and model structure.</p>
           </article>
-          <article class="workflow-card">
-            <span class="workflow-phase">Growth</span>
-            <h3>Content can expand without clutter</h3>
-            <p>
-              Dataset notes, methods, acknowledgements, and future tools can now grow independently
-              without turning the homepage into a long brochure.
-            </p>
+          <article class="usage-card">
+            <span class="usage-step">2</span>
+            <h3>Select layers and processing settings</h3>
+            <p>Choose datasets, bands, time windows, spatial resolution, and summary settings that fit the analytical design.</p>
           </article>
-          <article class="workflow-card">
-            <span class="workflow-phase">Sharing</span>
-            <h3>Links become more useful</h3>
-            <p>
-              You can share the app page, dataset page, or citation page directly depending on what a collaborator needs.
-            </p>
+          <article class="usage-card">
+            <span class="usage-step">3</span>
+            <h3>Inspect and export outputs</h3>
+            <p>Use mapped outputs and summaries as inputs for downstream transmission models or phylodynamic analyses.</p>
           </article>
         </div>
       </section>
     </main>
   </div>
+
+  <script src="./app-config.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>

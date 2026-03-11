@@ -15,7 +15,7 @@ This separation is the lowest-friction option for maintenance and GitHub hosting
 ## Project structure
 
 - `index.html`: homepage and platform overview
-- `platform.html`: dedicated live Earth Engine app page
+- `platform.html`: redirect for legacy platform links
 - `datasets.html`: covariate families and representative products
 - `methods.html`: extraction workflow and modelling context
 - `cite.html`: citation and attribution guidance
