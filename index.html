@@ -29,6 +29,9 @@
         </a>
         <div class="topbar-actions">
           <a class="nav-link" href="#platform">Platform</a>
+          <a class="nav-link" href="#datasets">Datasets</a>
+          <a class="nav-link" href="#workflow">Workflow</a>
+          <a class="nav-link" href="#cite">Cite</a>
           <a class="nav-link" href="#about">About</a>
           <a class="button button-ghost" href="https://github.com/graeme-dor/PhyloCov" target="_blank" rel="noreferrer">GitHub</a>
         </div>
@@ -89,8 +92,8 @@
           <p class="eyebrow">Platform</p>
           <h2>Explore hosted Earth Engine applications</h2>
           <p>
-            Replace the placeholder URL in <code>app-config.js</code> with your published Earth Engine app URL.
-            Additional tools can be added to the same config later.
+            PhyloCov currently hosts the live Earth Engine app below. The launcher and host layout
+            are already structured to support additional tools as the platform grows.
           </p>
         </div>
 
@@ -141,6 +144,117 @@
             </div>
           </div>
         </div>
+
+        <div class="usage-strip">
+          <article class="usage-card">
+            <span class="usage-step">1</span>
+            <h3>Screen candidate covariates</h3>
+            <p>
+              Use the Earth Engine interface to inspect spatial variability, environmental gradients,
+              and ecological context before selecting variables for downstream analysis.
+            </p>
+          </article>
+          <article class="usage-card">
+            <span class="usage-step">2</span>
+            <h3>Translate to modelling inputs</h3>
+            <p>
+              Identify covariates that can support phylodynamic priors, suitability surfaces,
+              or transmission hypotheses tied to climate and ecology.
+            </p>
+          </article>
+          <article class="usage-card">
+            <span class="usage-step">3</span>
+            <h3>Document provenance</h3>
+            <p>
+              Record dataset source, temporal window, spatial resolution, and ecological rationale
+              so your modelling workflow remains reproducible.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="datasets">
+        <div class="section-heading">
+          <p class="eyebrow">Datasets</p>
+          <h2>Covariate families relevant to transmission ecology</h2>
+          <p>
+            The platform is intended to support variable discovery across environmental drivers that may
+            shape persistence, dispersal, seasonal forcing, or contact structure in host-pathogen systems.
+          </p>
+        </div>
+
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <p class="catalog-kicker">Climate</p>
+            <h3>Temperature, rainfall, seasonality</h3>
+            <p>
+              Variables tied to thermal suitability, moisture dynamics, and seasonal forcing for vectors,
+              hosts, and pathogens across broad geographic extents.
+            </p>
+          </article>
+          <article class="catalog-card">
+            <p class="catalog-kicker">Landscape</p>
+            <h3>Vegetation, land cover, productivity</h3>
+            <p>
+              Ecological context layers that support interpretation of habitat structure, biomass, greenness,
+              and environmental heterogeneity in transmission settings.
+            </p>
+          </article>
+          <article class="catalog-card">
+            <p class="catalog-kicker">Hydrology</p>
+            <h3>Surface water and moisture proxies</h3>
+            <p>
+              Candidate surfaces for water-linked transmission systems, vector breeding conditions,
+              and climatic constraints on movement and persistence.
+            </p>
+          </article>
+          <article class="catalog-card">
+            <p class="catalog-kicker">Topography</p>
+            <h3>Elevation, slope, terrain effects</h3>
+            <p>
+              Static landscape constraints that can mediate climate gradients, accessibility,
+              habitat suitability, and spatial structuring in model covariates.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">Workflow</p>
+          <h2>How PhyloCov fits into phylodynamic and transmission pipelines</h2>
+          <p>
+            The site is designed as a front door for covariate discovery, variable justification,
+            and reproducible handoff into downstream statistical or mechanistic models.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <span class="workflow-phase">Phase A</span>
+            <h3>Explore and shortlist</h3>
+            <p>
+              Rapidly inspect climate and ecological layers to build a biologically plausible shortlist of
+              candidate variables for a focal pathogen, host, or transmission pathway.
+            </p>
+          </article>
+          <article class="workflow-card">
+            <span class="workflow-phase">Phase B</span>
+            <h3>Link to epidemiological hypotheses</h3>
+            <p>
+              Align candidate covariates with mechanistic expectations such as vector ecology,
+              host movement constraints, environmental persistence, or seasonal contact regimes.
+            </p>
+          </article>
+          <article class="workflow-card">
+            <span class="workflow-phase">Phase C</span>
+            <h3>Export, report, and cite</h3>
+            <p>
+              Carry selected surfaces into model-building workflows with clear provenance notes,
+              citation-ready source information, and a transparent rationale for inclusion.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section class="about-section" id="about">
@@ -165,10 +279,45 @@
             </p>
           </article>
           <article class="about-card">
-            <h3>What you can add next</h3>
+            <h3>Model-facing design</h3>
             <p>
-              Dataset notes, citations, changelogs, project team pages, user guides,
-              and a catalog of multiple Earth Engine tools can all be layered onto this shell.
+              The wrapper site can carry dataset notes, methods, citations, changelogs,
+              and app-specific guidance without overloading the Earth Engine interface itself.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="cite">
+        <div class="section-heading">
+          <p class="eyebrow">Cite</p>
+          <h2>Document datasets and platform provenance clearly</h2>
+          <p>
+            This section is a placeholder for your formal citation text, dataset acknowledgements,
+            and recommended wording for users who rely on PhyloCov in publications or reports.
+          </p>
+        </div>
+
+        <div class="cite-layout">
+          <article class="cite-card">
+            <h3>Recommended citation block</h3>
+            <p>
+              Add the preferred citation for the PhyloCov platform here once you have a stable project title,
+              author list, institution details, and repository or manuscript DOI.
+            </p>
+          </article>
+          <article class="cite-card">
+            <h3>Dataset acknowledgements</h3>
+            <p>
+              List the core remote sensing, climate, and ecological products surfaced through the app,
+              together with any terms of use or attribution language required by the source providers.
+            </p>
+          </article>
+          <article class="cite-card">
+            <h3>Methods note</h3>
+            <p>
+              Explain how covariates were selected, transformed, or interpreted in downstream
+              phylodynamic and transmission analyses so users can mirror the reasoning transparently.
             </p>
           </article>
         </div>
