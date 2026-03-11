@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhyloCov | Ecological Covariates for Phylodynamics</title>
+  <meta
+    name="description"
+    content="PhyloCov is a web platform for climate and ecological covariates designed for phylodynamic analysis and transmission modelling."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <nav class="topbar" aria-label="Primary">
+        <a class="brand" href="#top">
+          <span class="brand-mark">PC</span>
+          <span class="brand-copy">
+            <strong>PhyloCov</strong>
+            <span>Earth Engine covariate platform</span>
+          </span>
+        </a>
+        <div class="topbar-actions">
+          <a class="nav-link" href="#platform">Platform</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="button button-ghost" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Climate, ecology, and transmission context</p>
+          <h1>Host Earth Engine tools inside a clearer research-facing front end.</h1>
+          <p class="hero-text">
+            PhyloCov provides a branded web layer for ecological covariates used in
+            phylodynamic applications, transmission modelling, and outbreak analysis.
+            The Earth Engine app remains independent; this site becomes the public entry point.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#platform">Launch platform</a>
+            <a class="button button-ghost" href="#about">Why separate the app?</a>
+          </div>
+          <dl class="hero-metrics">
+            <div>
+              <dt>Architecture</dt>
+              <dd>Static site + embedded GEE app</dd>
+            </div>
+            <div>
+              <dt>Deployment</dt>
+              <dd>GitHub Pages ready</dd>
+            </div>
+            <div>
+              <dt>Scalability</dt>
+              <dd>Multiple tools supported later</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="hero-panel" aria-label="Platform summary">
+          <div class="panel-card">
+            <span class="panel-label">Recommended structure</span>
+            <h2>Keep the Earth Engine app separate.</h2>
+            <p>
+              This wrapper site handles branding, navigation, project context,
+              documentation, and future multi-app discovery. The GEE app continues
+              to evolve independently and can be swapped or versioned without rebuilding the site.
+            </p>
+            <ul class="feature-list">
+              <li>Dedicated research landing page</li>
+              <li>Embedded app via iframe</li>
+              <li>Config-driven support for future apps</li>
+              <li>Simple GitHub-hosted deployment</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="platform-section" id="platform">
+        <div class="section-heading">
+          <p class="eyebrow">Platform</p>
+          <h2>Explore hosted Earth Engine applications</h2>
+          <p>
+            Replace the placeholder URL in <code>app-config.js</code> with your published Earth Engine app URL.
+            Additional tools can be added to the same config later.
+          </p>
+        </div>
+
+        <div class="platform-layout">
+          <div class="app-browser">
+            <div class="app-browser-header">
+              <div>
+                <p class="eyebrow eyebrow-tight">Available tools</p>
+                <h3>Application launcher</h3>
+              </div>
+              <span class="app-count" id="app-count">0 apps</span>
+            </div>
+            <div class="app-list" id="app-list" role="tablist" aria-label="Earth Engine apps"></div>
+          </div>
+
+          <div class="embed-panel">
+            <div class="embed-meta">
+              <div>
+                <p class="eyebrow eyebrow-tight">Selected app</p>
+                <h3 id="app-title">Loading...</h3>
+              </div>
+              <a class="button button-ghost button-small" id="open-app-link" href="#" target="_blank" rel="noreferrer">
+                Open in new tab
+              </a>
+            </div>
+
+            <p class="app-description" id="app-description">
+              Loading app details.
+            </p>
+
+            <div class="tag-row" id="app-tags" aria-label="App tags"></div>
+
+            <div class="frame-wrap">
+              <iframe
+                id="app-frame"
+                title="PhyloCov hosted Earth Engine application"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+              <div class="frame-placeholder" id="frame-placeholder">
+                <div>
+                  <h4>Connect your live Earth Engine app</h4>
+                  <p>
+                    Add a valid published URL in <code>app-config.js</code> to load the application here.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Designed for ecological covariate discovery in phylodynamics</h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <h3>Research context</h3>
+            <p>
+              PhyloCov is positioned as a discovery layer for climate and ecological
+              variables that can support pathogen spread analysis, risk mapping, and transmission modelling.
+            </p>
+          </article>
+          <article class="about-card">
+            <h3>Why this structure works</h3>
+            <p>
+              Separating the public website from the Earth Engine app reduces deployment friction,
+              keeps the interface maintainable, and lets you present the science and the tool together.
+            </p>
+          </article>
+          <article class="about-card">
+            <h3>What you can add next</h3>
+            <p>
+              Dataset notes, citations, changelogs, project team pages, user guides,
+              and a catalog of multiple Earth Engine tools can all be layered onto this shell.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app-config.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
