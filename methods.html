@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhyloCov Methods | Extraction Workflow</title>
+  <meta
+    name="description"
+    content="Overview of the PhyloCov covariate extraction and phylodynamic workflow."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="topbar" aria-label="Primary">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">PC</span>
+        <span class="brand-copy">
+          <strong>PhyloCov</strong>
+          <span>Earth Engine covariate platform</span>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./platform.html">Platform</a>
+        <a class="nav-link" href="./datasets.html">Datasets</a>
+        <a class="nav-link" aria-current="page" href="./methods.html">Methods</a>
+        <a class="nav-link" href="./cite.html">Cite</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="button button-ghost" href="https://github.com/graeme-dor/PhyloCov" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Methods</p>
+        <h1>How PhyloCov fits into phylodynamic and transmission pipelines</h1>
+        <p class="page-lead">
+          The platform is designed as a front door for covariate discovery, variable justification,
+          and reproducible handoff into downstream statistical or mechanistic models.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <span class="workflow-phase">Phase A</span>
+            <h3>Choose datasets and bands</h3>
+            <p>Select from climate, topography, land-use, vegetation, population, and imported asset layers, then choose the relevant band or derived variable for the system of interest.</p>
+          </article>
+          <article class="workflow-card">
+            <span class="workflow-phase">Phase B</span>
+            <h3>Configure processing choices</h3>
+            <p>Define region, country, temporal window, spatial resolution, and zonal summary settings so the extracted covariates match the downstream analytical design.</p>
+          </article>
+          <article class="workflow-card">
+            <span class="workflow-phase">Phase C</span>
+            <h3>Visualise and export outputs</h3>
+            <p>Inspect interactive maps and summary outputs, then carry selected surfaces into environmental modelling or phylodynamic workflows with transparent provenance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <p class="eyebrow">Interpretation</p>
+          <h2>How the outputs are intended to be used</h2>
+        </div>
+
+        <div class="usage-strip">
+          <article class="usage-card">
+            <span class="usage-step">1</span>
+            <h3>Screen biologically plausible variables</h3>
+            <p>Build a shortlist of candidate covariates that align with plausible host, vector, or pathogen ecology.</p>
+          </article>
+          <article class="usage-card">
+            <span class="usage-step">2</span>
+            <h3>Link variables to hypotheses</h3>
+            <p>Align climate and ecological signals with mechanistic expectations such as persistence, movement, or seasonal forcing.</p>
+          </article>
+          <article class="usage-card">
+            <span class="usage-step">3</span>
+            <h3>Carry provenance into reporting</h3>
+            <p>Keep track of datasets, settings, and transformations so downstream modelling decisions remain reproducible.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

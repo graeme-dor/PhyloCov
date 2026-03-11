@@ -14,9 +14,14 @@ This separation is the lowest-friction option for maintenance and GitHub hosting
 
 ## Project structure
 
-- `index.html`: landing page and app host layout
-- `styles.css`: visual design and responsive styling
-- `script.js`: app switcher and iframe loader
+- `index.html`: homepage and platform overview
+- `platform.html`: dedicated live Earth Engine app page
+- `datasets.html`: covariate families and representative products
+- `methods.html`: extraction workflow and modelling context
+- `cite.html`: citation and attribution guidance
+- `about.html`: project framing and roadmap
+- `styles.css`: shared visual design and responsive styling
+- `script.js`: app switcher and iframe loader for the platform page
 - `app-config.js`: list of hosted Earth Engine apps
 
 ## Connect your Earth Engine app

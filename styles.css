@@ -129,6 +129,13 @@ body::before {
   font-weight: 600;
 }
 
+.nav-link[aria-current="page"] {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.32em;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.9fr);
@@ -300,6 +307,27 @@ body::before {
   backdrop-filter: blur(18px);
 }
 
+.page-header {
+  padding: 40px 0 12px;
+}
+
+.page-header h1 {
+  margin: 10px 0 14px;
+  font-family: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  max-width: 12ch;
+}
+
+.page-lead {
+  max-width: 64ch;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
 .section-heading {
   max-width: 70ch;
   margin-bottom: 24px;
@@ -454,6 +482,45 @@ body::before {
   margin-top: 20px;
 }
 
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.nav-card {
+  display: block;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.nav-card:hover,
+.nav-card:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(30, 107, 77, 0.35);
+  background: linear-gradient(180deg, rgba(223, 237, 226, 0.78), rgba(255, 250, 242, 0.84));
+}
+
+.nav-card h3 {
+  margin: 10px 0 12px;
+  font-family: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 1.75rem;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.nav-card p:last-child {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .platform-tools,
 .platform-notes {
   padding: 20px;
@@ -596,6 +663,7 @@ body::before {
   .about-grid,
   .hero-metrics,
   .platform-controls,
+  .link-grid,
   .usage-strip,
   .catalog-grid,
   .workflow-grid,

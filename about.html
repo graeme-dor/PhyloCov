@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhyloCov About | Project Context</title>
+  <meta
+    name="description"
+    content="About the PhyloCov platform and its role in ecological covariate discovery for phylodynamics."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+    >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="topbar" aria-label="Primary">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">PC</span>
+        <span class="brand-copy">
+          <strong>PhyloCov</strong>
+          <span>Earth Engine covariate platform</span>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./platform.html">Platform</a>
+        <a class="nav-link" href="./datasets.html">Datasets</a>
+        <a class="nav-link" href="./methods.html">Methods</a>
+        <a class="nav-link" href="./cite.html">Cite</a>
+        <a class="nav-link" aria-current="page" href="./about.html">About</a>
+        <a class="button button-ghost" href="https://github.com/graeme-dor/PhyloCov" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">About</p>
+        <h1>Designed for ecological covariate discovery in phylodynamics</h1>
+        <p class="page-lead">
+          PhyloCov is positioned as a discovery layer for climate and ecological variables that can support pathogen spread analysis, risk mapping, and integrated phylodynamic modelling.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <div class="about-grid">
+          <article class="about-card">
+            <h3>Research context</h3>
+            <p>PhyloCov brings climate and ecological covariate exploration into a more accessible research-facing interface around a live Earth Engine application.</p>
+          </article>
+          <article class="about-card">
+            <h3>Why the app stays separate</h3>
+            <p>Separating the public website from the Earth Engine app reduces deployment friction, keeps the interface maintainable, and lets the science and the tool evolve together without being tightly coupled.</p>
+          </article>
+          <article class="about-card">
+            <h3>Model-facing design</h3>
+            <p>The site can carry dataset notes, methods, citations, changelogs, and app guidance without overloading the Earth Engine interface itself.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <p class="eyebrow">Roadmap</p>
+          <h2>Near-term platform direction</h2>
+        </div>
+
+        <div class="cite-layout">
+          <article class="cite-card">
+            <h3>Expanded covariate library</h3>
+            <p>Add broader collections of environmental surfaces, imported assets, and grouped covariate presets that align with common modelling use cases.</p>
+          </article>
+          <article class="cite-card">
+            <h3>API and programmatic access</h3>
+            <p>Expose more structured outputs and documented access patterns so PhyloCov can sit more cleanly inside reproducible analysis pipelines.</p>
+          </article>
+          <article class="cite-card">
+            <h3>Related tools</h3>
+            <p>Leave room for companion applications such as pathogen- or workflow-specific modules that can be surfaced from the same hosting shell.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
